@@ -1,0 +1,27 @@
+---
+title: "Sample RMarkdown document"
+author: Renata Diaz
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Markdown for formatting text
+
+
+
+## Including and evaluating code
+
+
+```{r cars}
+summary(cars)
+```
+
+## Rendering plots
+
+
+```{r pressure}
+plot(pressure)
+```

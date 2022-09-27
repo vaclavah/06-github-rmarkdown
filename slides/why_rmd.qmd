@@ -1,0 +1,62 @@
+---
+title: "RMarkdown for shareable reports"
+format:
+  revealjs:
+    theme: dark
+    pdf-max-pages-per-slide: 1
+    self-contained: true
+editor: source
+---
+
+
+# What is RMarkdown?
+
+# Literate programming
+
+Text, code, and graphics all in one nice document!
+
+#
+
+[Cut to video of an .Rmd document]
+
+<!-- ![](images/song_plays.png){fig-alt="An .Rmd document, rendered"} -->
+
+
+<!-- # -->
+
+<!-- ::: {layout-ncol="2"} -->
+
+
+<!-- ![](images/source_code.png){fig-alt="An .Rmd source document"} -->
+
+
+<!-- ![](images/song_plays.png){fig-alt="An .Rmd document, rendered"} -->
+
+<!-- ::: -->
+
+# Interactive coding
+
+
+# 
+
+[Cut to video of interactive coding]
+
+<!-- ![](images/interactive_programming.png){fig-alt="An .Rmd source code document, showing in-line results"} -->
+
+# Shareable documents
+
+<!-- ![](images/song_plays_git.png){fig-alt="An .Rmd doc rendered to GitHub"} -->
+
+#
+
+[Cut to video of .Rmd hosted on GitHub and shareable html]
+
+# (and other fun stuff)
+
+#
+
+[Cut to quick video look at websites and presentations]
+
+# Your turn!
+
+In class, we'll practice a workflow using .RMarkdown and GitHub to share analyses with your collaborators (or classmates).
