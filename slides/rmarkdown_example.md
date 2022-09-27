@@ -1,34 +1,45 @@
-Sample RMarkdown document
+Exploring song plays
 ================
 Renata Diaz
 
-## GitHub Documents
+-   <a href="#about-the-song-plays-data"
+    id="toc-about-the-song-plays-data">About the song plays data</a>
+-   <a href="#glancing-at-the-data" id="toc-glancing-at-the-data">Glancing
+    at the data</a>
+-   <a href="#plotting-the-rank-abundance-distribution-of-song-plays"
+    id="toc-plotting-the-rank-abundance-distribution-of-song-plays">Plotting
+    the rank-abundance distribution of song plays</a>
 
-This is an R Markdown format used for publishing markdown documents to
-GitHub. When you click the **Knit** button all R code chunks are run and
-a markdown file (.md) suitable for publishing to GitHub is generated.
+# About the song plays data
 
-## Including Code
+This is a dataset of how many times I’ve played each song in my music
+library, which I got by importing my data and doing a little bit of
+preliminary data cleaning.
 
-You can include R code in the document as follows:
+# Glancing at the data
 
 ``` r
-summary(cars)
+songs_data <- read.csv("https://raw.githubusercontent.com/eco-evo-thr-2022/05-simple-metrics/hill/song_plays.csv")
+
+head(songs_data)
 ```
 
-    ##      speed           dist       
-    ##  Min.   : 4.0   Min.   :  2.00  
-    ##  1st Qu.:12.0   1st Qu.: 26.00  
-    ##  Median :15.0   Median : 36.00  
-    ##  Mean   :15.4   Mean   : 42.98  
-    ##  3rd Qu.:19.0   3rd Qu.: 56.00  
-    ##  Max.   :25.0   Max.   :120.00
+    ##                          song rank plays
+    ## 1 Dark Bird (St. Lucia Remix)    1   393
+    ## 2                    Delicate    2   312
+    ## 3        Almost (Sweet Music)    3   301
+    ## 4                  The Archer    4   301
+    ## 5                       Angel    5   293
+    ## 6                       Clean    6   284
 
-## Including Plots
+There are a total of 2755 songs in the dataset, and a total of 37912
+plays accounted for.
 
-You can also embed plots, for example:
+# Plotting the rank-abundance distribution of song plays
 
-![](rmarkdown_example_files/figure-gfm/pressure-1.png)<!-- -->
+``` r
+ggplot(songs_data, aes(rank, plays)) +
+  geom_line()
+```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to
-prevent printing of the R code that generated the plot.
+![](rmarkdown_example_files/figure-gfm/unnamed-chunk-1-1.png)<!-- -->
