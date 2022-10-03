@@ -1,0 +1,36 @@
+---
+title: "Exploring song plays"
+author: Renata Diaz
+output: 
+  github_document:
+    toc: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(ggplot2)
+theme_set(theme_bw())
+```
+
+# About the song plays data
+
+This is a dataset of how many times I've played each song in my music library, which I got by importing my data and doing a little bit of preliminary data cleaning. 
+
+# Glancing at the data
+
+```{r load data}
+songs_data <- read.csv("https://raw.githubusercontent.com/eco-evo-thr-2022/05-simple-metrics/hill/song_plays.csv")
+
+head(songs_data)
+```
+
+There are a total of `r nrow(songs_data)` songs in the dataset, and a total of `r sum(songs_data$plays)` plays accounted for.
+
+# Plotting the rank-abundance distribution of song plays
+
+```{r}
+
+ggplot(songs_data, aes(rank, plays)) +
+  geom_line()
+
+```
